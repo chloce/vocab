@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  
+    
+  form(action="/" method="post")
+    input(id="word-input" type="text" name="word")
+    input(id="mean-input" type="text" name="mean")
+    input(type="submit" value="投稿")
+
+    -var i = 0;
+    if words.length >= 1
+        ul
+        while i < words.length
+            li
+                span=words[i].word
+                span :
+                span=words[i].mean
+                input(type="button" value="complete" class="complete")
+                typr 
+            -i++;
+
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    script(src="javascripts/user.js")

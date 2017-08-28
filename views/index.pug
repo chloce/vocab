@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+  
+    
+  form(action="/" method="post")
+    input(type="text" name="word")
+    input(type="text" name="mean")
+    input(type="submit" value="投稿")
+
+  -var i = 0;
+  ul
+    while i < words.length
+      li
+        span=words[i].word
+        span  :
+        span=words[i].mean        
+      -i++;
+  
+  
+
